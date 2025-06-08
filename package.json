@@ -1,0 +1,13 @@
+{
+  "name": "render-proxy",
+  "version": "1.0.0",
+  "description": "A proxy that can access Poki, Kour.io, etc. using Render",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "unblocker": "^2.1.0"
+  }
+}
