@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classroom Proxy</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #1f1f1f;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 300px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      background: #00b894;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Classroom Proxy</h1>
+  <p>ゲームやブロックされたサイトにアクセス！</p>
+  <input id="urlInput" placeholder="https://example.com" />
+  <button onclick="go()">Go</button>
+
+  <script>
+    function go() {
+      const url = document.getElementById('urlInput').value;
+      if (!url.startsWith("http")) {
+        alert("http(s):// から入力してください");
+        return;
+      }
+      window.location.href = `/proxy/${url}`;
+    }
+  </script>
+</body>
+</html>
